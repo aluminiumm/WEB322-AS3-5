@@ -1,0 +1,16 @@
+<section>
+    <div class="form" id="login">
+        <h1>Login</h1>
+
+        {{#each errors}}
+            <p class="error-fields">{{this}}</p>
+        {{/each}}
+
+        <form action="/user/login" method="POST">
+            <input type="text" id="email" name="email" placeholder="Email">
+            <input type="password" id="password" name="password" placeholder="Password">
+            <input type="submit" value="Login">
+            <button type="button" id="register"><a href="/user/register">Customer Registration</a></button>
+        </form>
+    </div><!--/ form -->
+</section>

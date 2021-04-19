@@ -1,0 +1,30 @@
+<section id="movie-detail">
+  {{!-- <form action="/show/detail/{{_id}}" method="POST" name="contactForm"> --}}
+  <form method="POST" action="/update/{{_id}}?method=PUT">
+    <div id="grid-section-detail">
+      <div>
+        <img src="/uploads/{{imageL}}" alt="{{showTitle}} poster">
+      </div><!-- /l-grid -->
+      <div>
+        <h1>{{showTitle}}</h1>
+        <p class="readable">{{description}}</p>
+        <p>Category: {{category}}</p>
+        <p>Rating: {{rating}} / 10</p>
+        <div class="price-buttons">
+        {{#if priceRent}}
+          <input type="submit" value="Rental: ${{priceRent}}">
+        {{/if}}
+          <input type="submit" value="Buy: ${{priceBuy}}">
+        </div>
+      </div><!-- /r-grid -->
+
+    </div><!-- /grid-section-detail -->
+  </form>
+</section>
+
+<!-- Only display when admin login -->
+<p>
+<a href="/show/edit/{{_id}}" class="edit-delete-button">Edit</a> / 
+<a href="/show/delete/{{_id}}?method=DELETE" class="edit-delete-button">Delete</a> / 
+<a href="/show/list/">Dashboard</a>
+</p>

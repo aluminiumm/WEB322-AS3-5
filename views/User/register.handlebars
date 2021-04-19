@@ -1,0 +1,17 @@
+<section>
+    <div class="form" id="login">
+        <h1>Customer Registration</h1>
+
+        {{#each errors}}
+            <p class="error-fields">{{this}}</p>
+        {{/each}}
+
+        <form method="POST" action="/user/register" enctype="multipart/form-data">
+            <input type="text" name="firstName" id="firstName" placeholder="First name">
+            <input type="text" name="lastName" id="lastName" placeholder="Last name">
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <input type="submit" value="Registration">
+        </form>
+    </div><!--/ form -->
+</section>

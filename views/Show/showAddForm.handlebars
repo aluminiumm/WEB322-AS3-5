@@ -1,0 +1,70 @@
+<section>
+    <ul class="breadcrumb">
+        <li><a href="/show/list/">Show Dashboard</a></li>
+        <li>Add a Show</li>
+    </ul>
+
+    <div class="form" id="dashboard-form">
+        <h1>Add a Show</h1>
+    
+        <form method="POST" action="/show/add" enctype="multipart/form-data">
+            <div class="dashboard-form-grid">
+                <label>Title</label>
+                <input type="text" name="showTitle" id="showTitle" value="{{showTitle}}">
+
+                <label>Description</label>
+                <textarea id="description" name="description">{{description}}</textarea>
+
+                <label>Category</label>
+                <select name="category">
+                    <option value="Action">Action</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Mystery">Mystery</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Thriller">Thriller</option>
+                    <option value="Kids">Kids</option>
+                </select>
+
+                <label>Rating</label>
+                <input type="text" name="rating" id="rating" value="{{rating}}">
+
+                <label>Thumbnail Image</label>
+                <!-- files are binary data! form needs enctype (see above) -->
+                <input type="file" name="imageS" id="imageS">
+
+                <label>Main Image</label>
+                <!-- files are binary data! form needs enctype (see above) -->
+                <input type="file" name="imageL" id="imageL">
+
+                <label>Rental Price</label>
+                <input type="text" name="priceRent" id="priceRent" value="{{priceRent}}">
+
+                <label>Purchase Price</label>
+                <input type="text" name="priceBuy" id="priceBuy" value="{{priceBuy}}">
+
+                <label>TV Show</label>
+                <select name="tv">
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+
+                <label>Featured Show</label>
+                <select name="featured">
+                    <option value="false">No</option>
+                    <option value="true">Yes</option>
+                </select>
+            </div><!--/ dashboard-form-grid -->
+
+            <input type="submit" value="Add a Show">
+
+        </form>
+    </div><!--/ dashboard-form -->
+
+    <ul class="breadcrumb">
+        <li><a href="/show/list/">Show Dashboard</a></li>
+        <li>Add a Show</li>
+    </ul>
+</section>

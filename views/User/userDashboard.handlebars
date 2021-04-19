@@ -1,0 +1,18 @@
+<section id="movies">
+    <p>Welcome! {{user.firstName}} {{user.lastName}},</p>
+
+        <h2>Recommend Shows</h2>
+        <div class="grid-movies">
+        {{#each data}}
+            <div>
+                <a href="/show/detail/{{this.id}}">
+                <img src="/uploads/{{this.imageS}}" alt="poster"><br>
+                {{this.showTitle}}</a>
+            </div>
+        {{/each}}
+        </div>
+
+        <h2>Your Orders</h2>
+        <p>No orders yet.</p>
+</section>
+

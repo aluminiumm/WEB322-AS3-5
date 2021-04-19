@@ -1,0 +1,405 @@
+/*------ fonts ------ */
+/* base */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* site logo */
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@800&display=swap');
+/* welcome coupon */
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@900&display=swap');
+/* icons */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+/*------ common ------ */
+html {
+	display: flex;
+	justify-content: center;
+	font-family: 'Roboto', sans-serif;
+    background: #000066;
+}
+body {
+    width: 80%;
+	margin: 0;
+	padding: 0;
+    color: white;
+}
+a:link, a:visited {
+    color: #0099FF;
+    text-decoration: none;
+}
+a:hover, button:hover, input:hover {
+    opacity: 0.7;
+}
+/* align */
+div.justify-content-center {
+	display: flex;
+	justify-content: center;
+}
+div.tx-align-center {
+	text-align: center;
+}
+/* grid */
+div.grid1-1 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+/* form */
+div.form {
+	width: 480px;
+	padding: 40px;
+	margin: 80px auto;
+	color: #000066;
+	background: white;
+	border-radius: 10px;
+}
+div.form h1 {
+	margin-top: 0;
+}
+div.form input, div.form textarea, div.form select {
+	width: 455px;
+	font-size: 110%;
+	margin-bottom: 10px;
+	padding: 10px;
+	border: 2px solid lightgrey;
+	border-radius: 5px;
+}
+form input[type="submit"], form button, button {
+	width: 100%;
+	color: white;
+	font-size: 110%;
+	background: #0099FF;
+	padding: 13px;
+	margin-bottom: 10px;
+	border: 0;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.error-fields {
+    color: crimson;
+}
+/* banner */
+.banner img {
+	width: 100%;
+}
+/* font */
+.tx-small {
+	font-size: 80%;
+}
+/* icon */
+i.material-icons {
+	display: inline-flex;
+	vertical-align: middle;
+}
+/* transparent */
+.trans50 {
+	opacity: 0.7;
+}
+/*------ header ------ */
+header, footer {
+	background: #000033;
+}
+header > nav#grid-header {
+	display: grid;
+	grid-template-columns: auto 6fr auto;
+}
+/* site logo */
+header > nav > div#logo {
+    font-size: 28px;
+    font-family: 'Exo 2', sans-serif;
+	color: white;
+    padding: 10px 15px;
+}
+header > nav > div > ul {
+	padding-left: 0;
+}
+header > nav > div > ul > li {
+	display: inline;
+    padding: 0 10px;
+}
+header > nav a:link, nav a:visited {
+	color: white;
+}
+header > nav a:hover {
+    opacity: 0.7;
+}
+/* main menu: movies & TV */
+header > nav > div#mainMenu {
+	padding-left: 0;
+    font-size: 120%;
+}
+/* sub menu: registration, login */
+header > nav > div#subMenu {
+    text-align: right;
+    font-size: 90%;
+    padding: 10px 10px 0 0;
+}
+
+/*------ breadcrumb ------ */
+ul.breadcrumb {
+	font-size: 80%;
+	padding-left: 14px;
+	list-style: none;
+}
+/* Display list items side by side */
+ul.breadcrumb li {
+	display: inline;
+}
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	content: "\003E";
+}
+
+/*------ index ------ */
+section#index {
+	margin-bottom: 80px;
+}
+section#index h1 {
+	display: none;
+}
+section.grid-index {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5%;
+	margin-bottom: 30px;
+}
+section.grid-index > div > div.grid-movies {
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 5%;
+}
+/* carousel */
+.carousel-container .prev,
+.carousel-container .next {
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 40px;
+	text-decoration: none;
+	transition: all 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+.carousel-container .prev:hover,
+.carousel-container .next:hover {
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+.carousel-container .prev {
+	left: 2px;
+}
+.carousel-container .next {
+	right: 2px;
+}
+.carousel-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	position: relative;
+}
+.carousel-container .slide {
+	display: none;
+	width: 100%;
+}
+.carousel-container .slide img {
+	width: 100%;
+}
+.carousel-container a:hover {
+    opacity: 1;
+}
+
+/*------ movie listing ------ */
+section#movies {
+	margin-bottom: 120px;
+}
+.grid-movies {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	gap: 1%;
+	row-gap: 5%;
+}
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+	.grid-movies {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5%;
+		row-gap: 5%;
+	}
+}
+.grid-movies > div > a {
+	color: white;
+	text-decoration: none;
+}
+.grid-movies img {
+	width: 100%;
+	margin-bottom: 5%;
+}
+.grid-movies span.outdate {
+	font-size: 80%;
+}
+.grid-movies span.rating {
+	font-size: 80%;
+	margin-left: 3%;
+}
+.grid-movies span.rating > strong {
+	color: black;
+	background: gold;
+	padding: 1px 3px;
+}
+
+/*------ movie detail ------ */
+#grid-section-detail {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	gap: 3%;
+}
+#grid-section-detail img {
+	width: 100%;
+}
+#grid-section-detail span.outdate {
+	margin-left: 3%;
+}
+#grid-section-detail span.rating {
+	margin-left: 3%;
+}
+#grid-section-detail span.rating > strong {
+	color: black;
+	background: gold;
+	padding: 1px 3px;
+}
+#grid-section-detail div.price-buttons {
+	width: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 3%;
+}
+
+/*------ login, register ------ */
+div.form#login button {
+	width: 100%;
+}
+div.form#login button#register {
+	color: #0099FF;
+	border: 2px solid #0099FF;
+	background: white;
+}
+/*------ register (welcome coupon) ------ */
+#coupon {
+	text-align: center;
+	color: white;
+	background: crimson;
+}
+#coupon p {
+	margin: 0; padding: 0;
+}
+#coupon p#read-txt {
+	font-size: 150%;
+	padding: 20px 0 0 0;
+}
+#coupon p#offer {
+	font: 40px 'Chivo', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+#coupon > p#offer > strong {
+	font-size: 100px;
+}
+#coupon p#code {
+	font-size: 150%;
+	border: 3px dashed white;
+	width: 50%;
+	margin: 0 auto 20px;
+	padding: 10px;
+}
+#coupon p#date {
+	padding-bottom: 20px;
+}
+
+/*------ admin dashboard, cart ------ */
+#admin-dashboard, #cart-table {
+	margin-bottom: 40px;
+}
+#admin-dashboard table.list, table.list th, table.list td,
+#cart-table      table.list, table.list th, table.list td {
+	border: 2px solid #000033;
+	padding: 5px;
+}
+#admin-dashboard table.list, #cart-table table.list {
+	width: 100%;
+	border-collapse: collapse;
+	color: #000066;
+	background: lightgrey;
+	margin-bottom: 20px;
+}
+#admin-dashboard table.list th, #cart-table table.list th {
+	font-size: 80%;
+	background: #000033;
+	color: white;
+	font-weight: normal;
+}
+#admin-dashboard img[alt="Thumbnail"], #admin-dashboard img[alt="Main"],
+#cart-table img[alt="Thumbnail"], #cart-table img[alt="Main"] {
+		max-height: 100px;
+}
+#admin-dashboard i.material-icons, #cart-table i.material-icons {
+	font-size: 110%;
+}
+#admin-dashboard a.edit-button, #cart-table a.edit-button {
+	color: forestgreen;
+}
+#admin-dashboard a.delete-button, #cart-table a.delete-button {
+	color: crimson;
+}
+#admin-dashboard button, #cart-table button {
+	width: 30%;
+}
+/*------ cart ------ */
+#cart-table table.list {
+	background: white;
+}
+
+/* form */
+#dashboard-form {
+	width: 700px;
+	padding: 20px;
+	margin: 20px auto;
+	background: lightgrey;
+}
+.dashboard-form-grid {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	white-space: nowrap;
+}
+div#dashboard-form input[type="text"], 
+div#dashboard-form input[type="file"], 
+div#dashboard-form textarea, 
+div#dashboard-form select {
+	width: auto;
+	font-size: 100%;
+	padding: 5px;
+}
+div#dashboard-form textarea {
+	height: 100px;
+}
+
+/*------ footer ------ */
+footer {
+	display: grid;
+	grid-template-columns: 6fr auto;
+	font-size: 70%;
+	padding: 20px 20px 80px 20px;
+}
+footer > div > ul {
+	padding-left: 0;
+	margin: 0;
+	border-left: 1px solid #0099FF;
+}
+footer > div > ul > li {
+	display: inline;
+	padding: 0 10px;
+	border-right: 1px solid #0099FF;
+}

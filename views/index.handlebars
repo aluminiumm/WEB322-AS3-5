@@ -1,0 +1,66 @@
+<section id="index">
+<h1>VUDU: Home</h1>
+    <!-- Hero Section -->
+        <div class="carousel-container">
+            <div class="slide">
+                <a href="movies/1616880"><img src="images/carousel1.jpg" alt=""></a>
+            </div>
+            <div class="slide">
+                <a href="movies/1576347"><img src="images/carousel2.jpg" alt=""></a>
+            </div>
+            <div class="slide">
+                <a href="movies/13316"><img src="images/carousel3.jpg" alt=""></a>
+            </div>
+            <div class="slide">
+                <a href="movies/1576343"><img src="images/carousel5.jpg" alt=""></a>
+            </div>
+
+            <a href="#" class="prev" title="Previous">&#10094</a>
+            <a href="#" class="next" title="Next">&#10095</a>
+        </div>
+    <!-- /Hero Section -->
+
+    <section class="grid-index">
+        <div>
+            <h2>Featured Movies</h2>
+            <div class="grid-movies">
+            {{#each data}}
+            {{#if this.tv}}
+            {{else}}
+                <div>
+                    <a href="/show/detail/{{this.id}}">
+                    <img src="/uploads/{{this.imageS}}" alt="poster"><br>
+                    {{this.showTitle}}</a>
+                </div>
+            {{/if}}
+            {{/each}}
+            </div><!-- /grid-movies -->
+        </div>
+
+
+        <div>
+            <h2>Featured TV Shows</h2>
+            <div class="grid-movies">
+            {{#each data}}
+            {{#if this.tv}}
+                <div>
+                    <a href="/show/detail/{{this.id}}">
+                    <img src="/uploads/{{this.imageS}}" alt="poster"><br>
+                    {{this.showTitle}}</a>
+                </div>
+            {{/if}}
+            {{/each}}
+
+            </div><!-- /grid-movies -->
+        </div>
+    </section><!-- /grid-index -->
+
+    <section class="grid-index">
+        <div>
+            <span class="banner"><a href="#"><img src="images/bnr_movie.jpg" alt="Editors Choice"></a></span>
+        </div>
+        <div>
+            <span class="banner"><a href="#"><img src="images/bnr_tv.jpg" alt="TV Season Sale"></a></span>
+        </div>
+    </section><!-- /grid-index -->
+</section><!-- /index -->

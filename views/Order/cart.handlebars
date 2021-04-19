@@ -1,0 +1,38 @@
+<section>
+    <div id="cart-table">
+    <h1>Your Cart</h1>
+
+        <table class="list">
+            <thead>
+                <th>&nbsp;</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Rental</th>
+                <th>Purchase</th>
+                <th>Quantity</th>
+                <th>Delete</th>
+            </thead>
+            <tbody>
+                {{#each data}}
+                    <tr>
+                    <td><img src="/uploads/{{this.imageS}}" alt="Thumbnail"></td>
+                    <td><strong><a href="/show/detail/{{this.id}}">{{this.title}}</a></strong></td>
+                    <td>{{this.category}}</td>
+                    <td>${{this.priceRent}}</td>
+                    <td>${{this.priceBuy}}</td>
+                    <td>${{this.quantity}}</td>
+                    <td><a href="/show/delete/{{this.id}}?method=DELETE" class="delete-button"><i class="material-icons">delete</i>Delete</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="right">Total:</td>
+                        <td colspan="3">$ </td>
+                    </tr>
+                {{else}}
+                    <td colspan="7">
+                        <p align="center">Your cart is empty!</p>
+                    </td>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>

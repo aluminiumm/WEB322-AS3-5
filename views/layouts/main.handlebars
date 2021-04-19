@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav id="grid-header">
+            <div id="logo"><a href="/">VUDU</a></div>
+            <div id="mainMenu">
+                <ul>
+                    <li><a href="/movies">Movies &amp; TV Shows</a></li>
+                </ul>
+            </div>
+            <div id="subMenu">
+                <ul>
+                    {{#if user}}
+                    <li><i class="material-icons trans50">account_circle</i> {{user.firstName}}</li>
+                    <li><a href="/user/logout">Logout</a></li>
+                    {{else}}
+                    <li><a href="/user/register">Customer Registration</a></li>
+                    <li><a href="/user/login">Login</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        <div>
+            <ul>
+                <li><a href="#">Terms and Policies</a></li>
+                <li><a href="#">Your Privacy Rights - Privacy Policy</a></li>
+                <li><a href="#">AdChoices</a></li>
+                <li><a href="#">Do Not Sell My Personal Information</a></li>
+                <li><a href="#">California Notice</a></li>
+                <li><a href="#">Feedback</a></li>
+            </ul>
+        </div>
+        <div>
+            &copy; 2021 Fandango
+        </div>
+    </footer>
+
+    <!-- Loads a browser JS files -->
+    <script src="/js/carousel.js"></script>
+</body>
+</html>
