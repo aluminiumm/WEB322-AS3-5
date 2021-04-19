@@ -1,5 +1,4 @@
 <section id="movie-detail">
-  {{!-- <form action="/show/detail/{{_id}}" method="POST" name="contactForm"> --}}
   <form method="POST" action="/update/{{_id}}?method=PUT">
     <div id="grid-section-detail">
       <div>
@@ -21,10 +20,3 @@
     </div><!-- /grid-section-detail -->
   </form>
 </section>
-
-<!-- Only display when admin login -->
-<p>
-<a href="/show/edit/{{_id}}" class="edit-delete-button">Edit</a> / 
-<a href="/show/delete/{{_id}}?method=DELETE" class="edit-delete-button">Delete</a> / 
-<a href="/show/list/">Dashboard</a>
-</p>
